@@ -1,0 +1,134 @@
+.weatherCards {
+  display: flex;
+  /* background-color: aqua; */
+  justify-content: flex-start;
+  position: relative;
+  transition: left 0.4s ease-out;
+}
+
+.weatherCards__card.system {
+  background-color: #B6F1FF;
+  padding: 2rem;
+  margin: 0 1rem;
+  border-radius: 2rem;
+  width: var(--card-width);
+  height: var(--card-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 0px 3px 1px 1px rgb(182, 241, 255, 0.5);
+}
+
+.weatherCards__card.system h3 {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.6rem;
+}
+
+.weatherCards__card.system i {
+  font-size: 10rem;
+  cursor: pointer;
+  color: #2c2c2c;
+  transition: transform 0.2s ease-out, color 0.2s ease-out;
+}
+
+.weatherCards__card.system i:hover {
+  transform: scale(0.92);
+  color: #212121;
+}
+
+.controllers {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.controller-left,
+.controller-right {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: not-allowed;
+}
+
+.controller-left.active,
+.controller-right.active {
+  cursor: pointer;
+}
+
+.controller-left {
+  margin-right: 4rem;
+}
+
+.controller-left i,
+.controller-right i {
+  font-size: 6rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.2s ease-out;
+  color: rgba(255, 255, 255, 0.3);
+} 
+
+.controller-left:hover i,
+.controller-right:hover i{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.controller-left.active i,
+.controller-right.active i {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.controller-left.active:hover i,
+.controller-right.active:hover i{
+  color: rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 1199px) {
+  .weatherCards {
+    /* background-color: lawngreen; */
+    flex-direction: column;
+  }
+
+  .weatherCards__card.system {
+    margin: 1rem 0;
+  }
+
+  .weatherCards__card.system h3 {
+    position: static;
+    transform: translateX(0);
+    margin-bottom: 1rem;
+  }
+
+  .weatherCards__card.system i {
+    font-size: 9rem;
+  }
+
+  .controllers {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .weatherCards__card.system {
+    padding: 1rem;
+    border-radius: 2rem;
+  }
+
+  .weatherCards__card.system h3 {
+    font-size: 1.8rem;
+  }
+
+  .weatherCards__card.system i {
+    font-size: 7rem;
+  }
+}

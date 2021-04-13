@@ -1,0 +1,56 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--navbar-height);
+  width: 100%;
+  background-color: rgba(85, 130, 255, 0.7);
+  /* background-color: rgba(255, 99, 71, 0.794); */
+  color: whitesmoke;
+}
+
+.navbar__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 2rem;
+  height: 100%;
+  align-items: center;
+}
+
+.navbar__container i {
+  margin-right: 0.5rem;
+  font-size: 2.4rem;
+}
+
+.navbar__logo,
+.navbar__date {
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+.navbar__logo {
+  justify-self: flex-start;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+
+.navbar__logo i {
+  font-size: 3.6rem;
+}
+
+.navbar__date {
+  justify-self: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__title {
+    display: none;
+  }
+}
