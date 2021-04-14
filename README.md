@@ -14,7 +14,7 @@
 
 `npm install`
 
-##### Run Snap Shot from the root directory.
+##### Run project from the root directory.
 
 `npm start`
 
